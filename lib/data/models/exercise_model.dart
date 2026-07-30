@@ -1,5 +1,3 @@
-
-
 /// Exercise data model for the GymBro app.
 /// Represents a single exercise from the dataset.
 class ExerciseModel {
@@ -71,9 +69,8 @@ class ExerciseModel {
       equipment: json['equipment'] as String? ?? '',
       target: json['target'] as String? ?? '',
       muscleGroup: json['muscle_group'] as String? ?? '',
-      secondaryMuscles: (json['secondary_muscles'] as List<dynamic>?)
-              ?.cast<String>() ??
-          [],
+      secondaryMuscles:
+          (json['secondary_muscles'] as List<dynamic>?)?.cast<String>() ?? [],
       instructions: steps,
       imageUrl: imagePath.isNotEmpty ? '$baseUrl$imagePath' : '',
       gifUrl: gifPath.isNotEmpty ? '$baseUrl$gifPath' : '',
@@ -166,8 +163,7 @@ class ExerciseModel {
 
   /// Search-friendly concatenation of key fields
   String get searchableText {
-    return '$name $bodyPart $equipment $target $muscleGroup'
-        .toLowerCase();
+    return '$name $bodyPart $equipment $target $muscleGroup'.toLowerCase();
   }
 
   @override
