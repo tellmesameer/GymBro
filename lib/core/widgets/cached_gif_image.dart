@@ -37,17 +37,17 @@ class CachedGifImage extends StatelessWidget {
         fit: fit,
         loadingBuilder: (context, child, loadingProgress) {
           if (loadingProgress == null) {
-            print('[Network] Successfully loaded image: $imageUrl');
+            debugPrint('[Network] Successfully loaded image: $imageUrl');
             return child;
           }
           final pct = loadingProgress.expectedTotalBytes != null
               ? (loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes! * 100).toStringAsFixed(0)
               : '?';
-          print('[Network] Loading image $imageUrl ($pct%)');
+          debugPrint('[Network] Loading image $imageUrl ($pct%)');
           return _shimmerPlaceholder();
         },
         errorBuilder: (context, error, stackTrace) {
-          print('[Network] Error loading image $imageUrl: $error');
+          debugPrint('[Network] Error loading image $imageUrl: $error');
           return _errorPlaceholder();
         },
       );

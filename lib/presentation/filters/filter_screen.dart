@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../core/theme/app_colors.dart';
 import '../providers/filter_provider.dart';
-import '../providers/exercise_providers.dart';
 
 class FilterScreen extends ConsumerStatefulWidget {
   final String? bodyPart;
@@ -160,7 +159,7 @@ class _FilterScreenState extends ConsumerState<FilterScreen> {
                         style: TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w400,
-                          color: AppColors.textOnAccent.withOpacity(0.7),
+                          color: AppColors.textOnAccent.withValues(alpha: 0.7),
                         ),
                       ),
                     ],

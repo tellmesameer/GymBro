@@ -4,7 +4,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/constants/app_constants.dart';
-import '../providers/exercise_providers.dart';
 import '../providers/recent_provider.dart';
 import 'widgets/explore_card.dart';
 import 'widgets/stat_cards.dart';
@@ -92,7 +91,7 @@ class HomeScreen extends ConsumerWidget {
                       'Let\'s train smart today 💪',
                       style: TextStyle(
                         fontSize: 15,
-                        color: AppColors.textSecondary.withOpacity(0.8),
+                        color: AppColors.textSecondary.withValues(alpha: 0.8),
                       ),
                     ),
                   ],
@@ -102,17 +101,17 @@ class HomeScreen extends ConsumerWidget {
 
             // ── Explore Card ──────────────────────────────────────────────
             SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: const ExploreCard(),
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: ExploreCard(),
               ).animate().fadeIn(duration: 500.ms, delay: 200.ms).slideY(begin: 0.15, end: 0),
             ),
 
             // ── Stat Cards ────────────────────────────────────────────────
             SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-                child: const StatCards(),
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(20, 16, 20, 0),
+                child: StatCards(),
               ).animate().fadeIn(duration: 500.ms, delay: 300.ms).slideY(begin: 0.1, end: 0),
             ),
 
@@ -211,9 +210,7 @@ class _RecentSection extends ConsumerWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      // Could navigate to full recent list
-                    },
+                    onTap: () => context.push('/recent'),
                     child: const Text(
                       'View all',
                       style: TextStyle(

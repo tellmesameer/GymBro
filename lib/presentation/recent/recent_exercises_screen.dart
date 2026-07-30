@@ -3,29 +3,33 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/widgets/exercise_card_widget.dart';
-import '../providers/favorites_provider.dart';
+import '../providers/recent_provider.dart';
 import '../providers/exercise_providers.dart';
 
-class FavoritesScreen extends ConsumerWidget {
-  const FavoritesScreen({super.key});
+class RecentExercisesScreen extends ConsumerWidget {
+  const RecentExercisesScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final favoriteIds = ref.watch(favoritesProvider);
+    final recentIds = ref.watch(recentProvider);
 
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.background,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: const Text(
-          'Favorites',
+          'Recently Viewed',
           style: TextStyle(fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
       ),
-      body: favoriteIds.isEmpty
+      body: recentIds.isEmpty
           ? _emptyState()
-          : _FavoritesList(favoriteIds: favoriteIds.toList()),
+          : _RecentList(recentIds: recentIds.toList()),
     );
   }
 
@@ -42,14 +46,14 @@ class FavoritesScreen extends ConsumerWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Icon(
-              Icons.favorite_rounded,
+              Icons.history_rounded,
               size: 36,
               color: AppColors.accent.withValues(alpha: 0.5),
             ),
           ),
           const SizedBox(height: 20),
           const Text(
-            'No favorites yet',
+            'No recent exercises',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
@@ -58,7 +62,7 @@ class FavoritesScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Tap the heart icon on any exercise\nto save it here',
+            'Exercises you view will\nappear here',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14,
@@ -71,18 +75,18 @@ class FavoritesScreen extends ConsumerWidget {
   }
 }
 
-class _FavoritesList extends ConsumerWidget {
-  final List<String> favoriteIds;
+class _RecentList extends ConsumerWidget {
+  final List<String> recentIds;
 
-  const _FavoritesList({required this.favoriteIds});
+  const _RecentList({required this.recentIds});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListView.builder(
       padding: const EdgeInsets.only(top: 8, bottom: 100),
-      itemCount: favoriteIds.length,
+      itemCount: recentIds.length,
       itemBuilder: (context, index) {
-        final id = favoriteIds[index];
+        final id = recentIds[index];
         final exerciseAsync = ref.watch(exerciseByIdProvider(id));
 
         return exerciseAsync.when(

@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 
 /// Exercise data model for the GymBro app.
 /// Represents a single exercise from the dataset.

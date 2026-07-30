@@ -7,7 +7,7 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData get darkTheme {
-    final colorScheme = ColorScheme.dark(
+    const colorScheme = ColorScheme.dark(
       brightness: Brightness.dark,
       primary: AppColors.accent,
       onPrimary: AppColors.textOnAccent,
@@ -204,7 +204,7 @@ class AppTheme {
   }
 
   static TextTheme _buildTextTheme() {
-    return GoogleFonts.interTextTheme(
+    return GoogleFonts.notoSansTextTheme(
       const TextTheme(
         // ── Display ─────────────────────────────────────────────────────
         displayLarge: TextStyle(

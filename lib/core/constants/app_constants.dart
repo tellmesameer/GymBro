@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// App-wide constants for GymBro
 class AppConstants {
   AppConstants._();
@@ -96,16 +98,16 @@ class AppConstants {
   };
 
   // ── Body Part Icons (Material Icons) ──────────────────────────────────────
-  static const Map<String, int> bodyPartIcons = {
-    'back': 0xe1c3,       // accessibility_new
-    'cardio': 0xe566,      // directions_run
-    'chest': 0xe2cc,       // fitness_center
-    'lower arms': 0xe53e,  // front_hand
-    'lower legs': 0xe566,  // directions_run
-    'neck': 0xe7fd,        // person
-    'shoulders': 0xe2cc,   // fitness_center
-    'upper arms': 0xe2cc,  // fitness_center
-    'upper legs': 0xe566,  // directions_run
-    'waist': 0xe1c3,       // accessibility_new
+  static const Map<String, IconData> bodyPartIcons = {
+    'back': IconData(0xe1c3, fontFamily: 'MaterialIcons'),       // accessibility_new
+    'cardio': IconData(0xe566, fontFamily: 'MaterialIcons'),      // directions_run
+    'chest': IconData(0xe2cc, fontFamily: 'MaterialIcons'),       // fitness_center
+    'lower arms': IconData(0xe53e, fontFamily: 'MaterialIcons'),  // front_hand
+    'lower legs': IconData(0xe566, fontFamily: 'MaterialIcons'),  // directions_run
+    'neck': IconData(0xe7fd, fontFamily: 'MaterialIcons'),        // person
+    'shoulders': IconData(0xe2cc, fontFamily: 'MaterialIcons'),   // fitness_center
+    'upper arms': IconData(0xe2cc, fontFamily: 'MaterialIcons'),  // fitness_center
+    'upper legs': IconData(0xe566, fontFamily: 'MaterialIcons'),  // directions_run
+    'waist': IconData(0xe1c3, fontFamily: 'MaterialIcons'),       // accessibility_new
   };
 }

@@ -1,4 +1,4 @@
-import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_colors.dart';
 
@@ -508,15 +508,15 @@ class BodySvgPainter extends CustomPainter {
       final fillPaint = Paint()
         ..style = PaintingStyle.fill
         ..color = isSelected
-            ? AppColors.muscleHighlight.withOpacity(0.6 * animationValue)
-            : AppColors.muscleDefault.withOpacity(0.4);
+            ? AppColors.muscleHighlight.withValues(alpha: 0.6 * animationValue)
+            : AppColors.muscleDefault.withValues(alpha: 0.4);
 
       final strokePaint = Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = isSelected ? 1.5 : 0.5
         ..color = isSelected
-            ? AppColors.muscleHighlight.withOpacity(0.9)
-            : AppColors.muscleOutline.withOpacity(0.5);
+            ? AppColors.muscleHighlight.withValues(alpha: 0.9)
+            : AppColors.muscleOutline.withValues(alpha: 0.5);
 
       canvas.drawPath(muscle.path, fillPaint);
       canvas.drawPath(muscle.path, strokePaint);
@@ -525,7 +525,7 @@ class BodySvgPainter extends CustomPainter {
       if (isSelected) {
         final glowPaint = Paint()
           ..style = PaintingStyle.fill
-          ..color = AppColors.muscleHighlight.withOpacity(0.15 * animationValue)
+          ..color = AppColors.muscleHighlight.withValues(alpha: 0.15 * animationValue)
           ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8);
         canvas.drawPath(muscle.path, glowPaint);
       }
@@ -540,7 +540,7 @@ class BodySvgPainter extends CustomPainter {
     final outlinePaint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.2
-      ..color = AppColors.bodyOutline.withOpacity(0.3);
+      ..color = AppColors.bodyOutline.withValues(alpha: 0.3);
 
     final bodyPath = Path();
 
@@ -604,7 +604,7 @@ class BodySvgPainter extends CustomPainter {
     // Body fill
     final fillPaint = Paint()
       ..style = PaintingStyle.fill
-      ..color = AppColors.bodyFill.withOpacity(0.3);
+      ..color = AppColors.bodyFill.withValues(alpha: 0.3);
     canvas.drawPath(torsoPath, fillPaint);
   }
 

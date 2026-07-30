@@ -49,7 +49,7 @@ class RecentExerciseCard extends ConsumerWidget {
                     child: Container(
                       padding: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.5),
+                        color: Colors.black.withValues(alpha: 0.5),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Icon(
@@ -86,7 +86,7 @@ class RecentExerciseCard extends ConsumerWidget {
                     exercise.displayBodyPart,
                     style: TextStyle(
                       fontSize: 10,
-                      color: AppColors.accent.withOpacity(0.8),
+                      color: AppColors.accent.withValues(alpha: 0.8),
                       fontWeight: FontWeight.w500,
                     ),
                   ),

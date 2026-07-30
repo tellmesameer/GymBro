@@ -54,15 +54,15 @@ class _ExerciseDetailScreenState extends ConsumerState<ExerciseDetailScreen>
         }
         return _buildContent(exercise);
       },
-      loading: () => Scaffold(
+      loading: () => const Scaffold(
         backgroundColor: AppColors.background,
-        body: const Center(
+        body: Center(
           child: CircularProgressIndicator(color: AppColors.accent),
         ),
       ),
-      error: (_, __) => Scaffold(
+      error: (_, __) => const Scaffold(
         backgroundColor: AppColors.background,
-        body: const Center(child: Text('Error loading exercise')),
+        body: Center(child: Text('Error loading exercise')),
       ),
     );
   }
@@ -83,7 +83,7 @@ class _ExerciseDetailScreenState extends ConsumerState<ExerciseDetailScreen>
               icon: Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
-                  color: AppColors.surfaceLight.withOpacity(0.8),
+                  color: AppColors.surfaceLight.withValues(alpha: 0.8),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(
@@ -269,7 +269,7 @@ class _ExerciseDetailScreenState extends ConsumerState<ExerciseDetailScreen>
                   height: 52,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      // TODO: Add to workout
+                      //  Add to workout
                     },
                     icon: const Icon(Icons.play_arrow_rounded, size: 20),
                     label: const Text('Start Workout'),
@@ -346,7 +346,7 @@ class _InfoRow extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.1),
+              color: iconColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, size: 18, color: iconColor),
@@ -417,7 +417,7 @@ class _DifficultyRow extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(Icons.signal_cellular_alt_rounded,
@@ -503,7 +503,7 @@ class _InstructionsList extends StatelessWidget {
                 width: 28,
                 height: 28,
                 decoration: BoxDecoration(
-                  color: AppColors.accent.withOpacity(0.1),
+                  color: AppColors.accent.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Center(

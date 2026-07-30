@@ -7,7 +7,7 @@ class StatCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(
           child: _StatCard(
@@ -16,7 +16,7 @@ class StatCards extends StatelessWidget {
             icon: Icons.fitness_center_rounded,
           ),
         ),
-        const SizedBox(width: 10),
+        SizedBox(width: 10),
         Expanded(
           child: _StatCard(
             value: '50+',
@@ -24,7 +24,7 @@ class StatCards extends StatelessWidget {
             icon: Icons.accessibility_new_rounded,
           ),
         ),
-        const SizedBox(width: 10),
+        SizedBox(width: 10),
         Expanded(
           child: _StatCard(
             value: '40+',
@@ -62,7 +62,7 @@ class _StatCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: AppColors.accent.withOpacity(0.1),
+              color: AppColors.accent.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(

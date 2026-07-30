@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -43,8 +44,8 @@ class _MusclesSelectorScreenState extends ConsumerState<MusclesSelectorScreen>
   @override
   Widget build(BuildContext context) {
     final bodyCounts = ref.watch(bodyPartCountsProvider);
-    print('BODY COUNTS: $bodyCounts');
-    print('SELECTED BODY PART: $_selectedBodyPart');
+    debugPrint('BODY COUNTS: $bodyCounts');
+    debugPrint('SELECTED BODY PART: $_selectedBodyPart');
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -220,18 +221,18 @@ class _MusclesSelectorScreenState extends ConsumerState<MusclesSelectorScreen>
                   width: 20,
                   height: 1,
                   color: isSelected
-                      ? AppColors.accent.withOpacity(0.5)
-                      : AppColors.textTertiary.withOpacity(0.3),
+                      ? AppColors.accent.withValues(alpha: 0.5)
+                      : AppColors.textTertiary.withValues(alpha: 0.3),
                 ),
               Container(
                 padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
                   color: isSelected
-                      ? AppColors.accent.withOpacity(0.15)
-                      : AppColors.surfaceLight.withOpacity(0.8),
+                      ? AppColors.accent.withValues(alpha: 0.15)
+                      : AppColors.surfaceLight.withValues(alpha: 0.8),
                   borderRadius: BorderRadius.circular(8),
                   border: isSelected
-                      ? Border.all(color: AppColors.accent.withOpacity(0.3))
+                      ? Border.all(color: AppColors.accent.withValues(alpha: 0.3))
                       : null,
                 ),
                 child: Row(
@@ -264,8 +265,8 @@ class _MusclesSelectorScreenState extends ConsumerState<MusclesSelectorScreen>
                   width: 20,
                   height: 1,
                   color: isSelected
-                      ? AppColors.accent.withOpacity(0.5)
-                      : AppColors.textTertiary.withOpacity(0.3),
+                      ? AppColors.accent.withValues(alpha: 0.5)
+                      : AppColors.textTertiary.withValues(alpha: 0.3),
                 ),
             ],
           ),
@@ -299,7 +300,7 @@ class _MuscleInfoCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.card,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppColors.accent.withOpacity(0.3)),
+          border: Border.all(color: AppColors.accent.withValues(alpha: 0.3)),
         ),
         child: Row(
           children: [
@@ -307,7 +308,7 @@ class _MuscleInfoCard extends StatelessWidget {
               width: 44,
               height: 44,
               decoration: BoxDecoration(
-                color: AppColors.accent.withOpacity(0.15),
+                color: AppColors.accent.withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(

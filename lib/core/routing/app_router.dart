@@ -10,6 +10,7 @@ import '../../presentation/favorites/favorites_screen.dart';
 import '../../presentation/workout/workout_list_screen.dart';
 import '../../presentation/workout/workout_detail_screen.dart';
 import '../../presentation/settings/profile_screen.dart';
+import '../../presentation/recent/recent_exercises_screen.dart';
 import '../widgets/bottom_nav_shell.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -80,6 +81,13 @@ final GoRouter appRouter = GoRouter(
         final bodyPart = state.pathParameters['bodyPart'] ?? 'chest';
         return ExerciseListScreen(bodyPart: bodyPart);
       },
+    ),
+
+    // ── Recent Exercises ──────────────────────────────────────────────────
+    GoRoute(
+      path: '/recent',
+      parentNavigatorKey: _rootNavigatorKey,
+      builder: (context, state) => const RecentExercisesScreen(),
     ),
 
     // ── Exercise Detail ───────────────────────────────────────────────────

@@ -58,13 +58,13 @@ class WorkoutListScreen extends ConsumerWidget {
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              color: AppColors.accent.withOpacity(0.1),
+              color: AppColors.accent.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Icon(
               Icons.fitness_center_rounded,
               size: 36,
-              color: AppColors.accent.withOpacity(0.5),
+              color: AppColors.accent.withValues(alpha: 0.5),
             ),
           ),
           const SizedBox(height: 20),
@@ -81,7 +81,7 @@ class WorkoutListScreen extends ConsumerWidget {
             'Create your first workout routine',
             style: TextStyle(
               fontSize: 14,
-              color: AppColors.textSecondary.withOpacity(0.7),
+              color: AppColors.textSecondary.withValues(alpha: 0.7),
             ),
           ),
           const SizedBox(height: 24),
@@ -135,7 +135,7 @@ class WorkoutListScreen extends ConsumerWidget {
                           height: 40,
                           decoration: BoxDecoration(
                             color: selectedEmoji == emoji
-                                ? AppColors.accent.withOpacity(0.2)
+                                ? AppColors.accent.withValues(alpha: 0.2)
                                 : AppColors.surfaceLight,
                             borderRadius: BorderRadius.circular(10),
                             border: selectedEmoji == emoji
@@ -204,7 +204,7 @@ class _WorkoutCard extends ConsumerWidget {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: AppColors.accent.withOpacity(0.1),
+                color: AppColors.accent.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(14),
               ),
               child: Center(

@@ -26,10 +26,10 @@ class ProfileScreen extends StatelessWidget {
               width: 80,
               height: 80,
               decoration: BoxDecoration(
-                color: AppColors.accent.withOpacity(0.15),
+                color: AppColors.accent.withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(24),
                 border: Border.all(
-                  color: AppColors.accent.withOpacity(0.3),
+                  color: AppColors.accent.withValues(alpha: 0.3),
                   width: 2,
                 ),
               ),
@@ -133,7 +133,7 @@ class ProfileScreen extends StatelessWidget {
               'GymBro v1.0.0',
               style: TextStyle(
                 fontSize: 12,
-                color: AppColors.textTertiary.withOpacity(0.5),
+                color: AppColors.textTertiary.withValues(alpha: 0.5),
               ),
             ),
             const SizedBox(height: 4),
@@ -141,7 +141,7 @@ class ProfileScreen extends StatelessWidget {
               'Exercise data by exercises-dataset',
               style: TextStyle(
                 fontSize: 11,
-                color: AppColors.textTertiary.withOpacity(0.3),
+                color: AppColors.textTertiary.withValues(alpha: 0.3),
               ),
             ),
 

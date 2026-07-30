@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/widgets/exercise_card_widget.dart';
-import '../../data/models/exercise_model.dart';
 import '../providers/exercise_providers.dart';
 import '../providers/filter_provider.dart';
 
@@ -33,8 +32,7 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
     final exercisesAsync =
         ref.watch(filteredExercisesProvider(widget.bodyPart));
     final displayName =
-        AppConstants.bodyPartDisplayNames[widget.bodyPart] ??
-            widget.bodyPart;
+        AppConstants.bodyPartDisplayNames[widget.bodyPart] ?? widget.bodyPart;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -53,17 +51,17 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
             onPressed: () => context.push(
               '/filters?bodyPart=${widget.bodyPart}',
             ),
-            child: Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
+                Text(
                   'Filter',
                   style: TextStyle(
                     color: AppColors.accent,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                const SizedBox(width: 2),
+                SizedBox(width: 2),
                 Icon(
                   Icons.tune_rounded,
                   size: 16,
@@ -84,7 +82,8 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
               onChanged: (value) {
                 ref.read(searchQueryProvider.notifier).state = value;
               },
-              style: const TextStyle(color: AppColors.textPrimary, fontSize: 14),
+              style:
+                  const TextStyle(color: AppColors.textPrimary, fontSize: 14),
               decoration: InputDecoration(
                 hintText: 'Search in ${displayName.toLowerCase()} exercises...',
                 prefixIcon: const Icon(
@@ -181,9 +180,10 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
                     return ExerciseCardWidget(
                       exercise: exercises[index],
                     ).animate().fadeIn(
-                      duration: 300.ms,
-                      delay: Duration(milliseconds: (index * 30).clamp(0, 300)),
-                    );
+                          duration: 300.ms,
+                          delay: Duration(
+                              milliseconds: (index * 30).clamp(0, 300)),
+                        );
                   },
                 );
               },
@@ -192,7 +192,7 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
                   color: AppColors.accent,
                 ),
               ),
-              error: (error, _) => Center(
+              error: (error, _) => const Center(
                 child: Text(
                   'Error loading exercises',
                   style: TextStyle(color: AppColors.textSecondary),
@@ -225,7 +225,7 @@ class _ExerciseListScreenState extends ConsumerState<ExerciseListScreen> {
           Icon(
             Icons.search_off_rounded,
             size: 64,
-            color: AppColors.textTertiary.withOpacity(0.5),
+            color: AppColors.textTertiary.withValues(alpha: 0.5),
           ),
           const SizedBox(height: 16),
           const Text(
@@ -272,9 +272,7 @@ class _FilterChip extends StatelessWidget {
           color: isSelected ? AppColors.accent : AppColors.surfaceLight,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isSelected
-                ? AppColors.accent
-                : AppColors.cardBorder,
+            color: isSelected ? AppColors.accent : AppColors.cardBorder,
             width: 0.5,
           ),
         ),
@@ -283,9 +281,8 @@ class _FilterChip extends StatelessWidget {
           style: TextStyle(
             fontSize: 13,
             fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-            color: isSelected
-                ? AppColors.textOnAccent
-                : AppColors.textSecondary,
+            color:
+                isSelected ? AppColors.textOnAccent : AppColors.textSecondary,
           ),
         ),
       ),

@@ -1,4 +1,6 @@
 #!/usr/bin/env dart
+// ignore_for_file: avoid_print
+
 /// Script to download and preprocess the exercises dataset from GitHub.
 ///
 /// Usage:
@@ -9,6 +11,7 @@
 ///   2. Keeps only English instructions (reduces size from ~17MB to ~2MB)
 ///   3. Converts relative image/gif paths to full GitHub raw URLs
 ///   4. Saves the processed data to assets/data/exercises.json
+library download_exercises;
 
 import 'dart:convert';
 import 'dart:io';

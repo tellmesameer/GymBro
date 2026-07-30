@@ -96,10 +96,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: AppColors.accent.withOpacity(0.1),
+                color: AppColors.accent.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(28),
                 border: Border.all(
-                  color: AppColors.accent.withOpacity(0.3),
+                  color: AppColors.accent.withValues(alpha: 0.3),
                   width: 2,
                 ),
               ),
@@ -135,7 +135,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
               'Your Fitness Companion',
               style: TextStyle(
                 fontSize: 14,
-                color: AppColors.textSecondary.withOpacity(0.7),
+                color: AppColors.textSecondary.withValues(alpha: 0.7),
                 letterSpacing: 2,
                 fontWeight: FontWeight.w300,
               ),

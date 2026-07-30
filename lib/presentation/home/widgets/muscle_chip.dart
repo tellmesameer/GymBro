@@ -17,7 +17,7 @@ class MuscleChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final displayName =
         AppConstants.bodyPartDisplayNames[bodyPart] ?? bodyPart;
-    final iconCode = AppConstants.bodyPartIcons[bodyPart] ?? 0xe2cc;
+    final iconData = AppConstants.bodyPartIcons[bodyPart] ?? const IconData(0xe2cc, fontFamily: 'MaterialIcons');
 
     return GestureDetector(
       onTap: onTap,
@@ -36,11 +36,11 @@ class MuscleChip extends StatelessWidget {
               width: 44,
               height: 44,
               decoration: BoxDecoration(
-                color: AppColors.accent.withOpacity(0.1),
+                color: AppColors.accent.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
-                IconData(iconCode, fontFamily: 'MaterialIcons'),
+                iconData,
                 size: 22,
                 color: AppColors.accent,
               ),

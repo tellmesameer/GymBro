@@ -25,7 +25,7 @@ class ExploreCard extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
           border: Border.all(
-            color: AppColors.accent.withOpacity(0.2),
+            color: AppColors.accent.withValues(alpha: 0.2),
             width: 1,
           ),
         ),
@@ -40,7 +40,7 @@ class ExploreCard extends StatelessWidget {
                 height: 140,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: AppColors.accent.withOpacity(0.06),
+                  color: AppColors.accent.withValues(alpha: 0.06),
                 ),
               ),
             ),
@@ -52,7 +52,7 @@ class ExploreCard extends StatelessWidget {
                 height: 80,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: AppColors.accent.withOpacity(0.08),
+                  color: AppColors.accent.withValues(alpha: 0.08),
                 ),
               ),
             ),
@@ -64,7 +64,7 @@ class ExploreCard extends StatelessWidget {
               child: Icon(
                 Icons.fitness_center_rounded,
                 size: 64,
-                color: AppColors.accent.withOpacity(0.25),
+                color: AppColors.accent.withValues(alpha: 0.25),
               ),
             ),
 
@@ -101,7 +101,7 @@ class ExploreCard extends StatelessWidget {
                         '1,300+ exercises',
                         style: TextStyle(
                           fontSize: 13,
-                          color: AppColors.textSecondary.withOpacity(0.7),
+                          color: AppColors.textSecondary.withValues(alpha: 0.7),
                         ),
                       ),
                     ],

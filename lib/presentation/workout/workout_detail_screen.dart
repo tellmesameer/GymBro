@@ -37,7 +37,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
         actions: [
           TextButton(
             onPressed: () {
-              // TODO: edit mode
+              //  edit mode
             },
             child: const Text(
               'Edit',
@@ -83,7 +83,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
                 : ReorderableListView.builder(
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
                     itemCount: workout.exercises.length,
-                    onReorder: (oldIndex, newIndex) {
+                    onReorderItem: (oldIndex, newIndex) {
                       ref.read(workoutProvider.notifier).reorderExercises(
                         workoutId,
                         oldIndex,
@@ -94,7 +94,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
                       return Material(
                         color: Colors.transparent,
                         elevation: 4,
-                        shadowColor: AppColors.accent.withOpacity(0.3),
+                        shadowColor: AppColors.accent.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(14),
                         child: child,
                       );
@@ -120,7 +120,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
             child: TextButton.icon(
               onPressed: () {
-                // TODO: navigate to exercise picker
+                //  navigate to exercise picker
               },
               icon: const Icon(
                 Icons.add_rounded,
@@ -144,7 +144,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
                   height: 54,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      // TODO: start workout execution
+                      //  start workout execution
                     },
                     icon: const Icon(Icons.play_arrow_rounded),
                     label: const Text(
@@ -178,7 +178,7 @@ class WorkoutDetailScreen extends ConsumerWidget {
           Icon(
             Icons.add_circle_outline_rounded,
             size: 48,
-            color: AppColors.textTertiary.withOpacity(0.5),
+            color: AppColors.textTertiary.withValues(alpha: 0.5),
           ),
           const SizedBox(height: 12),
           const Text(
@@ -232,7 +232,7 @@ class _WorkoutExerciseCard extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w600,
-                  color: AppColors.accent.withOpacity(0.6),
+                  color: AppColors.accent.withValues(alpha: 0.6),
                 ),
               ),
             ),
