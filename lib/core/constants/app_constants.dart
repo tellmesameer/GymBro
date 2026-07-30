@@ -97,6 +97,20 @@ class AppConstants {
     'waist': 'Core',
   };
 
+  // ── Body Part SVG Icons ──────────────────────────────────────────────────
+  static const Map<String, String> bodyPartSvgIcons = {
+    'back': 'assets/svg/body_parts/back.svg',
+    'cardio': 'assets/svg/body_parts/cardio.svg',
+    'chest': 'assets/svg/body_parts/chest.svg',
+    'lower arms': 'assets/svg/body_parts/arms.svg',
+    'lower legs': 'assets/svg/body_parts/legs.svg',
+    'neck': 'assets/svg/body_parts/neck.svg',
+    'shoulders': 'assets/svg/body_parts/shoulders.svg',
+    'upper arms': 'assets/svg/body_parts/arms.svg',
+    'upper legs': 'assets/svg/body_parts/legs.svg',
+    'waist': 'assets/svg/body_parts/core.svg',
+  };
+
   // ── Body Part Icons (Material Icons) ──────────────────────────────────────
   static const Map<String, IconData> bodyPartIcons = {
     'back': IconData(0xe1c3, fontFamily: 'MaterialIcons'),       // accessibility_new
