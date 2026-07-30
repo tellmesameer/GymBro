@@ -1,10 +1,5 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<<<<<<< HEAD
-  <path d="M32 52S13 41 13 27C13 20 18 15 24 15C28 15 31 17 32 20C33 17 36 15 40 15C46 15 51 20 51 27C51 41 32 52 32 52Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M18 33H26L29 27L35 39L39 33H46" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-=======
   <path d="M32 53S12 41 12 27C12 19 17 14 24 14C28 14 31 16 32 20C33 16 36 14 40 14C47 14 52 19 52 27C52 41 32 53 32 53Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
   <path d="M17 33H24L28 25L34 41L39 32H47" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M21 21C23 20 25 20 27 21M43 21C45 22 46 24 46 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
->>>>>>> c2366896b7b8150c29d834c22508d031d45d1ae6
 </svg>
