@@ -22,27 +22,26 @@ class LocalExerciseDatasource {
     if (_cachedExercises != null) return;
 
     try {
-      // Try loading from Hive cache first
+      // Try loading from Hive cache first. Do not clear this during hot reload;
+      // only replace it after we have a validated non-empty exercise list.
       final box = await Hive.openBox(AppConstants.exerciseBox);
-      await box.delete('exercises_data'); // Force clear cache to load fresh JSON
-      final cachedData = box.get('exercises_data');
+      final cachedExercises = _readCachedExercises(box.get('exercises_data'));
 
-      if (cachedData != null) {
-        final List<dynamic> jsonList = jsonDecode(cachedData as String);
-        _cachedExercises = jsonList
-            .map((e) =>
-                ExerciseModel.fromCachedJson(e as Map<String, dynamic>))
-            .toList();
+      if (_hasUsableExercises(cachedExercises)) {
+        _cachedExercises = cachedExercises;
       } else {
-        // Load from bundled asset
-        await _loadFromAsset();
+        // Load from bundled asset when the cache is absent or unusable.
+        final assetExercises = await _readExercisesFromAsset();
 
-        // Cache in Hive for next launch
-        if (_cachedExercises != null) {
-          final jsonString = jsonEncode(
-            _cachedExercises!.map((e) => e.toJson()).toList(),
-          );
-          await box.put('exercises_data', jsonString);
+        if (_hasUsableExercises(assetExercises)) {
+          _cachedExercises = assetExercises;
+          await _writeCache(box, assetExercises);
+        } else if (cachedExercises.isNotEmpty) {
+          // Keep the previous cache rather than replacing it with an empty or
+          // malformed import. This avoids blank exercise/media states.
+          _cachedExercises = cachedExercises;
+        } else {
+          _cachedExercises = <ExerciseModel>[];
         }
       }
 
@@ -55,14 +54,55 @@ class LocalExerciseDatasource {
     }
   }
 
-  /// Load exercises from the bundled JSON asset
+  /// Load exercises from the bundled JSON asset.
   Future<void> _loadFromAsset() async {
+    _cachedExercises = await _readExercisesFromAsset();
+  }
+
+  List<ExerciseModel> _readCachedExercises(Object? cachedData) {
+    if (cachedData is! String || cachedData.isEmpty) return <ExerciseModel>[];
+
+    try {
+      final decoded = jsonDecode(cachedData);
+      if (decoded is! List) return <ExerciseModel>[];
+
+      return decoded
+          .whereType<Map<String, dynamic>>()
+          .map(ExerciseModel.fromCachedJson)
+          .where(_hasUsableMedia)
+          .toList();
+    } catch (_) {
+      return <ExerciseModel>[];
+    }
+  }
+
+  Future<List<ExerciseModel>> _readExercisesFromAsset() async {
     final jsonString =
         await rootBundle.loadString(AppConstants.exercisesJsonPath);
-    final List<dynamic> jsonList = jsonDecode(jsonString);
-    _cachedExercises = jsonList
-        .map((e) => ExerciseModel.fromJson(e as Map<String, dynamic>))
+    final decoded = jsonDecode(jsonString);
+    if (decoded is! List) return <ExerciseModel>[];
+
+    return decoded
+        .whereType<Map<String, dynamic>>()
+        .map(ExerciseModel.fromJson)
+        .where(_hasUsableMedia)
         .toList();
+  }
+
+  Future<void> _writeCache(Box<dynamic> box, List<ExerciseModel> exercises) {
+    final jsonString = jsonEncode(exercises.map((e) => e.toJson()).toList());
+    return box.put('exercises_data', jsonString);
+  }
+
+  bool _hasUsableExercises(List<ExerciseModel> exercises) {
+    return exercises.isNotEmpty && exercises.every(_hasUsableMedia);
+  }
+
+  bool _hasUsableMedia(ExerciseModel exercise) {
+    return exercise.id.isNotEmpty &&
+        exercise.name.isNotEmpty &&
+        exercise.imageUrl.isNotEmpty &&
+        exercise.gifUrl.isNotEmpty;
   }
 
   /// Build precomputed indexes for fast filtering

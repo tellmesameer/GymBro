@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/constants/app_constants.dart';
 
@@ -17,7 +18,9 @@ class MuscleChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final displayName =
         AppConstants.bodyPartDisplayNames[bodyPart] ?? bodyPart;
-    final iconData = AppConstants.bodyPartIcons[bodyPart] ?? const IconData(0xe2cc, fontFamily: 'MaterialIcons');
+    final svgIcon = AppConstants.bodyPartSvgIcons[bodyPart];
+    final iconData = AppConstants.bodyPartIcons[bodyPart] ??
+        const IconData(0xe2cc, fontFamily: 'MaterialIcons');
 
     return GestureDetector(
       onTap: onTap,
@@ -39,10 +42,22 @@ class MuscleChip extends StatelessWidget {
                 color: AppColors.accent.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Icon(
-                iconData,
-                size: 22,
-                color: AppColors.accent,
+              child: Center(
+                child: svgIcon != null
+                    ? SvgPicture.asset(
+                        svgIcon,
+                        width: 26,
+                        height: 26,
+                        colorFilter: const ColorFilter.mode(
+                          AppColors.accent,
+                          BlendMode.srcIn,
+                        ),
+                      )
+                    : Icon(
+                        iconData,
+                        size: 22,
+                        color: AppColors.accent,
+                      ),
               ),
             ),
             const SizedBox(height: 8),
