@@ -49,4 +49,5 @@ flutter:
   assets:
     - assets/data/
     - assets/svg/
+    - assets/svg/body_parts/
 
