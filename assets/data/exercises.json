@@ -1,0 +1,338 @@
+[
+  {
+    "id": "0025",
+    "name": "barbell bench press",
+    "category": "chest",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectoralis major sternal head",
+    "muscle_group": "pectoralis major sternal head",
+    "secondary_muscles": ["anterior deltoid", "triceps brachii"],
+    "instruction_steps": {
+      "en": [
+        "Lie on a flat bench with your feet flat on the floor.",
+        "Grip the barbell slightly wider than shoulder width.",
+        "Unrack the barbell and hold it above your chest with arms extended.",
+        "Lower the bar to your mid-chest in a controlled manner.",
+        "Press the bar back up until your arms are fully extended.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0025-EIeI8Vf.jpg",
+    "gif_url": "videos/0025-EIeI8Vf.gif",
+    "media_id": "EIeI8Vf"
+  },
+  {
+    "id": "0043",
+    "name": "barbell full squat",
+    "category": "upper legs",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "gluteus maximus",
+    "muscle_group": "gluteus maximus",
+    "secondary_muscles": ["quadriceps", "hamstrings", "adductors", "soleus"],
+    "instruction_steps": {
+      "en": [
+        "Stand with feet shoulder-width apart with the barbell on your upper back.",
+        "Keep your chest up and core engaged.",
+        "Bend your knees and hips to lower your body as if sitting in a chair.",
+        "Descend until your thighs are at least parallel to the floor.",
+        "Drive through your heels to return to the starting position.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0043-qXTaZnJ.jpg",
+    "gif_url": "videos/0043-qXTaZnJ.gif",
+    "media_id": "qXTaZnJ"
+  },
+  {
+    "id": "0032",
+    "name": "barbell deadlift",
+    "category": "back",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "erector spinae",
+    "muscle_group": "erector spinae",
+    "secondary_muscles": ["gluteus maximus", "quadriceps", "hamstrings", "adductors", "trapezius"],
+    "instruction_steps": {
+      "en": [
+        "Stand with feet hip-width apart with the barbell over midfoot.",
+        "Bend at the hips and knees to grip the bar just outside your legs.",
+        "Keep your back flat and chest up.",
+        "Drive through your feet to stand up with the barbell.",
+        "Lock out at the top with shoulders back.",
+        "Lower the bar back to the floor in a controlled manner."
+      ]
+    },
+    "image": "images/0032-ila4NZS.jpg",
+    "gif_url": "videos/0032-ila4NZS.gif",
+    "media_id": "ila4NZS"
+  },
+  {
+    "id": "0652",
+    "name": "pull-up",
+    "category": "back",
+    "body_part": "back",
+    "equipment": "body weight",
+    "target": "latissimus dorsi",
+    "muscle_group": "latissimus dorsi",
+    "secondary_muscles": ["biceps brachii", "brachioradialis", "teres major", "posterior deltoid"],
+    "instruction_steps": {
+      "en": [
+        "Hang from a pull-up bar with an overhand grip, hands slightly wider than shoulder-width.",
+        "Engage your core and retract your shoulder blades.",
+        "Pull your body up until your chin is above the bar.",
+        "Lower yourself back down in a controlled manner.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0652-lBDjFxJ.jpg",
+    "gif_url": "videos/0652-lBDjFxJ.gif",
+    "media_id": "lBDjFxJ"
+  },
+  {
+    "id": "0294",
+    "name": "dumbbell biceps curl",
+    "category": "upper arms",
+    "body_part": "upper arms",
+    "equipment": "dumbbell",
+    "target": "biceps brachii",
+    "muscle_group": "biceps brachii",
+    "secondary_muscles": ["brachialis", "brachioradialis"],
+    "instruction_steps": {
+      "en": [
+        "Stand with a dumbbell in each hand, arms at your sides, palms facing forward.",
+        "Keeping your elbows close to your torso, curl the weights up.",
+        "Continue to raise the dumbbells until your biceps are fully contracted.",
+        "Hold briefly at the top of the movement.",
+        "Slowly lower the dumbbells back to the starting position.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0294-NbVPDMW.jpg",
+    "gif_url": "videos/0294-NbVPDMW.gif",
+    "media_id": "NbVPDMW"
+  },
+  {
+    "id": "0334",
+    "name": "dumbbell lateral raise",
+    "category": "shoulders",
+    "body_part": "shoulders",
+    "equipment": "dumbbell",
+    "target": "lateral deltoid",
+    "muscle_group": "lateral deltoid",
+    "secondary_muscles": ["anterior deltoid", "supraspinatus", "trapezius"],
+    "instruction_steps": {
+      "en": [
+        "Stand with a dumbbell in each hand at your sides.",
+        "Keep a slight bend in your elbows.",
+        "Raise your arms out to the sides until they are parallel with the floor.",
+        "Hold for a moment at the top.",
+        "Slowly lower the dumbbells back to your sides.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0334-DsgkuIt.jpg",
+    "gif_url": "videos/0334-DsgkuIt.gif",
+    "media_id": "DsgkuIt"
+  },
+  {
+    "id": "0653",
+    "name": "push-up",
+    "category": "chest",
+    "body_part": "chest",
+    "equipment": "body weight",
+    "target": "pectoralis major",
+    "muscle_group": "pectoralis major",
+    "secondary_muscles": ["anterior deltoid", "triceps brachii"],
+    "instruction_steps": {
+      "en": [
+        "Start in a plank position with hands slightly wider than shoulder-width.",
+        "Keep your body in a straight line from head to heels.",
+        "Lower your body until your chest nearly touches the floor.",
+        "Push back up to the starting position.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0653-push-up.jpg",
+    "gif_url": "videos/0653-push-up.gif",
+    "media_id": "push-up"
+  },
+  {
+    "id": "0580",
+    "name": "cable fly",
+    "category": "chest",
+    "body_part": "chest",
+    "equipment": "cable",
+    "target": "pectoralis major sternal head",
+    "muscle_group": "pectoralis major sternal head",
+    "secondary_muscles": ["anterior deltoid", "biceps brachii"],
+    "instruction_steps": {
+      "en": [
+        "Set the pulleys to chest height on a cable machine.",
+        "Grab the handles and step forward into a staggered stance.",
+        "With a slight bend in your elbows, bring your hands together in front of your chest.",
+        "Squeeze your chest muscles at the point of peak contraction.",
+        "Slowly return your arms to the starting position.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0580-cable-fly.jpg",
+    "gif_url": "videos/0580-cable-fly.gif",
+    "media_id": "cable-fly"
+  },
+  {
+    "id": "0100",
+    "name": "incline dumbbell press",
+    "category": "chest",
+    "body_part": "chest",
+    "equipment": "dumbbell",
+    "target": "pectoralis major clavicular head",
+    "muscle_group": "pectoralis major clavicular head",
+    "secondary_muscles": ["anterior deltoid", "triceps brachii"],
+    "instruction_steps": {
+      "en": [
+        "Set an adjustable bench to a 30-45 degree incline.",
+        "Sit back on the bench with a dumbbell in each hand.",
+        "Press the dumbbells up until your arms are extended.",
+        "Lower the dumbbells slowly to chest level.",
+        "Press back up and repeat."
+      ]
+    },
+    "image": "images/0100-incline-db.jpg",
+    "gif_url": "videos/0100-incline-db.gif",
+    "media_id": "incline-db"
+  },
+  {
+    "id": "0200",
+    "name": "leg press",
+    "category": "upper legs",
+    "body_part": "upper legs",
+    "equipment": "leverage machine",
+    "target": "quadriceps",
+    "muscle_group": "quadriceps",
+    "secondary_muscles": ["gluteus maximus", "hamstrings", "adductors"],
+    "instruction_steps": {
+      "en": [
+        "Sit on the leg press machine with your back against the pad.",
+        "Place your feet shoulder-width apart on the footplate.",
+        "Release the safety handles and lower the weight by bending your knees.",
+        "Lower until your knees are at about 90 degrees.",
+        "Press the weight back up by extending your legs.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0200-leg-press.jpg",
+    "gif_url": "videos/0200-leg-press.gif",
+    "media_id": "leg-press"
+  },
+  {
+    "id": "0300",
+    "name": "plank",
+    "category": "waist",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "rectus abdominis",
+    "muscle_group": "rectus abdominis",
+    "secondary_muscles": ["obliques", "transverse abdominis", "erector spinae"],
+    "instruction_steps": {
+      "en": [
+        "Start in a push-up position but rest on your forearms instead of your hands.",
+        "Keep your body in a straight line from head to heels.",
+        "Engage your core and hold the position.",
+        "Do not let your hips sag or rise.",
+        "Hold for the desired duration."
+      ]
+    },
+    "image": "images/0300-plank.jpg",
+    "gif_url": "videos/0300-plank.gif",
+    "media_id": "plank"
+  },
+  {
+    "id": "0400",
+    "name": "standing calf raise",
+    "category": "lower legs",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "gastrocnemius",
+    "muscle_group": "gastrocnemius",
+    "secondary_muscles": ["soleus"],
+    "instruction_steps": {
+      "en": [
+        "Stand on the edge of a step with your heels hanging off.",
+        "Rise up on your toes as high as possible.",
+        "Hold the top position for a moment.",
+        "Lower your heels below the step for a full stretch.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0400-calf-raise.jpg",
+    "gif_url": "videos/0400-calf-raise.gif",
+    "media_id": "calf-raise"
+  },
+  {
+    "id": "0500",
+    "name": "wrist curl",
+    "category": "lower arms",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "wrist flexors",
+    "muscle_group": "wrist flexors",
+    "secondary_muscles": ["forearm flexors"],
+    "instruction_steps": {
+      "en": [
+        "Sit on a bench and rest your forearms on your thighs with palms facing up.",
+        "Hold a dumbbell in each hand with wrists hanging over your knees.",
+        "Curl the dumbbells up by flexing your wrists.",
+        "Lower back down slowly.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0500-wrist-curl.jpg",
+    "gif_url": "videos/0500-wrist-curl.gif",
+    "media_id": "wrist-curl"
+  },
+  {
+    "id": "0600",
+    "name": "neck curl",
+    "category": "neck",
+    "body_part": "neck",
+    "equipment": "body weight",
+    "target": "sternocleidomastoid",
+    "muscle_group": "sternocleidomastoid",
+    "secondary_muscles": [],
+    "instruction_steps": {
+      "en": [
+        "Lie face up on a bench with your head hanging off the edge.",
+        "Place a weight plate on your forehead, holding it in place.",
+        "Curl your head up by flexing your neck.",
+        "Lower back down slowly.",
+        "Repeat for the desired number of repetitions."
+      ]
+    },
+    "image": "images/0600-neck-curl.jpg",
+    "gif_url": "videos/0600-neck-curl.gif",
+    "media_id": "neck-curl"
+  },
+  {
+    "id": "0700",
+    "name": "jumping jacks",
+    "category": "cardio",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "cardiovascular system",
+    "secondary_muscles": ["deltoids", "calves", "quadriceps"],
+    "instruction_steps": {
+      "en": [
+        "Stand with your feet together and arms at your sides.",
+        "Jump while spreading your legs and raising your arms overhead.",
+        "Jump again to return to the starting position.",
+        "Continue at a steady pace for the desired duration."
+      ]
+    },
+    "image": "images/0700-jumping-jacks.jpg",
+    "gif_url": "videos/0700-jumping-jacks.gif",
+    "media_id": "jumping-jacks"
+  }
+]
